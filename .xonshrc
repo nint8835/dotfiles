@@ -1,11 +1,13 @@
 import platform
+import os
 
-# XONSH WIZARD START
-xontrib load coreutils
-# XONSH WIZARD END
 
 if platform.system() == "Windows":
     $HOMEDIR = $USERPROFILE.replace("\\", "/")
+    $USERBIN = os.path.join($USERPROFILE, ".bin")
+
+    if not os.path.isdir(os.path.join($USERPROFILE, ".bin")):
+        os.mkdir(os.path.join($USERPROFILE, ".bin"))
 else:
     $HOMEDIR = $HOME
 
