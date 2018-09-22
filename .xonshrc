@@ -1,0 +1,12 @@
+import platform
+
+# XONSH WIZARD START
+xontrib load coreutils
+# XONSH WIZARD END
+
+if platform.system() == "Windows":
+    $HOMEDIR = $USERPROFILE.replace("\\", "/")
+else:
+    $HOMEDIR = $HOME
+
+aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
