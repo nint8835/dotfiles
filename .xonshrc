@@ -43,4 +43,4 @@ else:
 
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 
-$PROMPT = "{RED}{user}{WHITE}@{RED}{hostname} {BLUE}{cwd} $ "
+$PROMPT = "{RED}{user}{WHITE}@{RED}{hostname} {BLUE}{cwd} {prompt_end} "
