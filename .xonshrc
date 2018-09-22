@@ -1,13 +1,43 @@
 import platform
 import os
+import urllib.request
+import zipfile
+import shutil
 
 
 if platform.system() == "Windows":
     $HOMEDIR = $USERPROFILE.replace("\\", "/")
-    $USERBIN = os.path.join($USERPROFILE, ".bin")
+    $USERBIN = os.path.join($USERPROFILE, ".bin").replace("\\", "/")
 
     if not os.path.isdir(os.path.join($USERPROFILE, ".bin")):
+        print("Installing GnuWin32 coreutils...")
         os.mkdir(os.path.join($USERPROFILE, ".bin"))
+        cd $USERBIN
+        print("Downloading GnuWin32 dependencies...")
+        urllib.request.urlretrieve("https://downloads.sourceforge.net/project/gnuwin32/coreutils/5.3.0/coreutils-5.3.0-dep.zip", "coreutils-dep.zip")
+        print("Extracting dependencies...")
+        with zipfile.ZipFile("coreutils-dep.zip") as f:
+            f.extract("bin/libiconv2.dll")
+            f.extract("bin/libintl3.dll")
+        del coreutils-dep.zip
+
+        print("Downloading GnuWin32 coreutils...")
+        urllib.request.urlretrieve("https://downloads.sourceforge.net/project/gnuwin32/coreutils/5.3.0/coreutils-5.3.0-bin.zip", "coreutils.zip")
+        print("Extracting coreutils...")
+        with zipfile.ZipFile("coreutils.zip") as f:
+            for item in f.infolist():
+                if item.filename.startswith("bin/"):
+                    f.extract(item)
+        $[del coreutils.zip]
+        for f in os.listdir("bin"):
+            shutil.move(os.path.join("bin", f), f)
+        os.rmdir("bin")
+        print("Coreutils successfully installed.")
+
+        cd $HOMEDIR
+
+    if $USERBIN not in $PATH:
+        $PATH.append($USERBIN)
 else:
     $HOMEDIR = $HOME
 
