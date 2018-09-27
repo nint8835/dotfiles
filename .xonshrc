@@ -41,7 +41,14 @@ if platform.system() == "Windows":
 else:
     $HOMEDIR = $HOME
 
+def _compile_markdown(filenames):
+    for filename in filenames:
+        if filename.endswith(".md"):
+            filename = filename[:-3]
+        pandoc @(filename + ".md") -f markdown -o @(filename + ".pdf")
+
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
+aliases["md_compile"] = _compile_markdown
 
 $PROMPT = "{RED}{user}{WHITE}@{RED}{hostname} {BLUE}{cwd} {prompt_end} "
