@@ -46,10 +46,7 @@ def _compile_markdown(filenames):
         for filename in filenames:
             if filename.endswith(".md"):
                 filename = filename[:-3]
-            hercule @(filename + ".md") -o @(filename + "_temp.md")
-            pandoc @(filename + "_temp.md") -f markdown -o @(filename + ".pdf")
-            rm @(filename + "_temp.md")
-
+            hercule @(filename + ".md") | pandoc -o @(filename + ".pdf")
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
 aliases["md_compile"] = _compile_markdown
