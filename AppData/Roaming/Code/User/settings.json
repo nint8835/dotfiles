@@ -30,5 +30,8 @@
             "username": "oauth",
             "token": "system"
         }
-    ]
+    ],
+    "files.associations": {
+        "*.lr": "markdown"
+    }
 }
