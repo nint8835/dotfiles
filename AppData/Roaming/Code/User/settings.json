@@ -33,5 +33,17 @@
     ],
     "files.associations": {
         "*.lr": "markdown"
-    }
+    },
+    "material-icon-theme.activeIconPack": "none",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "git.autofetch": true,
+
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "plugin.json"
+            ],
+            "url": "https://raw.githubusercontent.com/nint8835/jigsaw/master/plugin.schema.json"
+        }
+    ]
 }
