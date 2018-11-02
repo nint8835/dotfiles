@@ -16,7 +16,7 @@
     "workbench.activityBar.visible": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.feedback.visible": false,
-    "terminal.integrated.shell.windows": "xonsh",
+    "terminal.integrated.shell.windows": "xonsh.bat",
     "python.jediEnabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.blame.toggleMode": "window",
