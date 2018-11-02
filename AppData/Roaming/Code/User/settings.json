@@ -22,5 +22,13 @@
     "gitlens.blame.toggleMode": "window",
     "gitlens.heatmap.toggleMode": "window",
     "explorer.confirmDragAndDrop": false,
-    "verilog.linting.linter": "iverilog"
+    "verilog.linting.linter": "iverilog",
+    "verilog.linting.iverilog.arguments": "-g2012",
+    "githubPullRequests.hosts": [
+        {
+            "host": "https://github.com",
+            "username": "oauth",
+            "token": "system"
+        }
+    ]
 }

@@ -1,0 +1,16 @@
+{
+	"Module": {
+		"prefix": "define",
+		"body": [
+			"`ifndef ${TM_FILENAME}",
+			"",
+			"module ${1}();",
+			"",
+			"endmodule",
+			"",
+			"`endif",
+			"`define ${TM_FILENAME}"
+		],
+		"description": "Defines a SystemVerilog module"
+	}
+}
