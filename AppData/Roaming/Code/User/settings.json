@@ -20,5 +20,7 @@
     "python.jediEnabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.blame.toggleMode": "window",
-    "gitlens.heatmap.toggleMode": "window"
+    "gitlens.heatmap.toggleMode": "window",
+    "explorer.confirmDragAndDrop": false,
+    "verilog.linting.linter": "iverilog"
 }
