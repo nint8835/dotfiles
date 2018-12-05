@@ -18,7 +18,7 @@
     "workbench.statusBar.feedback.visible": false,
     "terminal.integrated.shell.windows": "xonsh.bat",
     "python.jediEnabled": false,
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.blame.toggleMode": "window",
     "gitlens.heatmap.toggleMode": "window",
@@ -46,5 +46,6 @@
             ],
             "url": "https://raw.githubusercontent.com/nint8835/jigsaw/master/plugin.schema.json"
         }
-    ]
+    ],
+    "python.linting.flake8Enabled": true
 }
