@@ -5,9 +5,6 @@ import zipfile
 import shutil
 import time
 
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
-
 
 if platform.system() == "Windows":
     $HOMEDIR = $USERPROFILE.replace("\\", "/")
@@ -45,30 +42,10 @@ if platform.system() == "Windows":
 else:
     $HOMEDIR = $HOME
 
-class CompileHandler(FileSystemEventHandler):
-    def __init__(self, filename):
-        super().__init__()
-        self.filename = filename[:-3]
-    def on_modified(self, event):
-        f = event.src_path
-        if f.endswith(".md") or f.endswith(".py"):
-            print("Changes detected. Recompiling...")
-            hercule @(self.filename + ".md") | pandoc -o @(self.filename + ".pdf")
-
 def _compile_markdown(filename):
-    print("Listening for file changes... Press CTRL+C to quit.")
-    handler = CompileHandler(filename[0])
-    observer = Observer()
-    observer.schedule(handler, os.getcwd(), recursive=True)
-    observer.start()
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        try:
-            observer.stop()
-        except AttributeError:
-            pass
+    filename = filename[0].split(".")[0]
+    hercule @(filename + ".md") | pandoc -o @(filename + ".pdf")
+    
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
 aliases["md_compile"] = _compile_markdown
