@@ -25,13 +25,6 @@
     "explorer.confirmDragAndDrop": false,
     "verilog.linting.linter": "iverilog",
     "verilog.linting.iverilog.arguments": "-g2012",
-    "githubPullRequests.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
     "files.associations": {
         "*.lr": "markdown"
     },
