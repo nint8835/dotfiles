@@ -40,5 +40,10 @@
             "url": "https://raw.githubusercontent.com/nint8835/jigsaw/master/plugin.schema.json"
         }
     ],
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    "markdownlint.config": {
+        "MD013": false,
+        "MD041": false,
+        "MD002": false
+    }
 }
