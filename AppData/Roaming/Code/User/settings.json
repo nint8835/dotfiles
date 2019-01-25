@@ -46,5 +46,29 @@
         "MD041": false,
         "MD002": false
     },
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ]
 }
