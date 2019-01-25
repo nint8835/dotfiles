@@ -44,7 +44,7 @@ else:
 
 def _compile_markdown(filename):
     filename = filename[0].split(".")[0]
-    hercule @(filename + ".md") | pandoc -F mermaid-filter.cmd -o @(filename + ".pdf")
+    hercule @(filename + ".md") | pandoc --toc -o @(filename + ".pdf")
     
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
