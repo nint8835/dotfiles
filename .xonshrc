@@ -45,10 +45,26 @@ else:
 def _compile_markdown(filename):
     filename = filename[0].split(".")[0]
     hercule @(filename + ".md") | pandoc -o @(filename + ".pdf")
+
+def _work_on(args):
+    name = args[0]
+    locations = [
+        r"G:\My Drive\School",
+        r"C:\Development",
+        os.path.join($USERPROFILE, "Development")
+    ]
+    for location in locations:
+        if not os.path.isdir(location):
+            continue
+        for dirpath, _, __ in os.walk(location):
+            if dirpath.endswith(name):
+                cd @(dirpath)
+                return
     
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
 aliases["md_compile"] = _compile_markdown
 aliases["vscode_dump"] = "code --list-extensions > $HOMEDIR/AppData/Roaming/Code/User/extensions"
+aliases["workon"] = _work_on
 
 $PROMPT = "{RED}{user}{WHITE}@{RED}{hostname} {BLUE}{cwd}{WHITE}{gitstatus: [{}]} {BLUE}{prompt_end} "
