@@ -70,5 +70,6 @@
                 "pdflatex"
             ]
         }
-    ]
+    ],
+    "workbench.editor.showTabs": false
 }
