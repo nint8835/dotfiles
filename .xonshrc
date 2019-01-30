@@ -5,6 +5,19 @@ import zipfile
 import shutil
 import time
 
+DIRS = []
+
+locations = [
+    r"G:\My Drive\School",
+    r"C:\Development",
+    os.path.join($USERPROFILE, "Development")
+]
+for location in locations:
+    if not os.path.isdir(location):
+        continue
+    for dirpath, _, __ in os.walk(location):
+        DIRS.append(dirpath)
+
 
 if platform.system() == "Windows":
     $HOMEDIR = $USERPROFILE.replace("\\", "/")
@@ -52,23 +65,15 @@ def _compile_markdown(args):
             print("Please specify a filename.")
             return
     else:
-        filename = filename[0].split(".")[0]
+        filename = args[0].split(".")[0]
     hercule @(filename + ".md") | pandoc -o @(filename + ".pdf")
 
 def _work_on(args):
     name = args[0]
-    locations = [
-        r"G:\My Drive\School",
-        r"C:\Development",
-        os.path.join($USERPROFILE, "Development")
-    ]
-    for location in locations:
-        if not os.path.isdir(location):
-            continue
-        for dirpath, _, __ in os.walk(location):
-            if dirpath.endswith(name):
-                cd @(dirpath)
-                return
+    for dirname in DIRS:
+        if dirname.endswith(name):
+            cd @(dirname)
+            return
     
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
