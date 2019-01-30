@@ -4,20 +4,10 @@ import urllib.request
 import zipfile
 import shutil
 import time
+import json
 
+DIRPATH = os.path.join($USERPROFILE, ".dirs.json")
 DIRS = []
-
-locations = [
-    r"G:\My Drive\School",
-    r"C:\Development",
-    os.path.join($USERPROFILE, "Development")
-]
-for location in locations:
-    if not os.path.isdir(location):
-        continue
-    for dirpath, _, __ in os.walk(location):
-        DIRS.append(dirpath)
-
 
 if platform.system() == "Windows":
     $HOMEDIR = $USERPROFILE.replace("\\", "/")
@@ -74,11 +64,35 @@ def _work_on(args):
         if dirname.endswith(name):
             cd @(dirname)
             return
+
+def _rebuild_dirs(args):
+    global DIRS
+    DIRS = []
+    locations = [
+        r"G:\My Drive\School",
+        r"C:\Development",
+        os.path.join($USERPROFILE, "Development")
+    ]
+    for location in locations:
+        if not os.path.isdir(location):
+            continue
+        for dirpath, _, __ in os.walk(location):
+            if not ".git" in dirpath and not "node_modules" in dirpath:
+                DIRS.append(dirpath)
+    with open(DIRPATH, "w") as f:
+        json.dump(DIRS, f)
+
+if not os.path.isfile(DIRPATH):
+    _rebuild_dirs(None)
+else:
+    with open(DIRPATH) as f:
+        DIRS = json.load(f)
     
 aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
 aliases["md_compile"] = _compile_markdown
 aliases["vscode_dump"] = "code --list-extensions > $HOMEDIR/AppData/Roaming/Code/User/extensions"
 aliases["workon"] = _work_on
+aliases["rebuild_dirs"] = _rebuild_dirs
 
 $PROMPT = "{RED}{user}{WHITE}@{RED}{hostname} {BLUE}{cwd}{WHITE}{gitstatus: [{}]} {BLUE}{prompt_end} "
