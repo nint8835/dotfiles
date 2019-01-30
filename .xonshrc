@@ -42,8 +42,17 @@ if platform.system() == "Windows":
 else:
     $HOMEDIR = $HOME
 
-def _compile_markdown(filename):
-    filename = filename[0].split(".")[0]
+def _compile_markdown(args):
+    filename = None
+    if len(args) == 0:
+        for f in os.listdir(os.getcwd()):
+            if f.endswith(".md") and "Assignment" in f:
+                filename = f.split(".")[0]
+        if not filename:
+            print("Please specify a filename.")
+            return
+    else:
+        filename = filename[0].split(".")[0]
     hercule @(filename + ".md") | pandoc -o @(filename + ".pdf")
 
 def _work_on(args):
