@@ -58,6 +58,14 @@ def _compile_markdown(args):
         filename = args[0].split(".")[0]
     hercule @(filename + ".md") | pandoc -o @(filename + ".pdf")
 
+def _vscode_install(args):
+    """
+    Installs all vs code extensions from a dump created by vscode_dump
+    """
+    with open(os.path.join($USERPROFILE, "AppData/Roaming/Code/User/extensions")) as f:
+        for line in f:
+            code --install-extension @(line)
+
 def _work_on(args):
     name = args[0]
     for dirname in DIRS:
@@ -92,6 +100,7 @@ aliases["config"] = "git --git-dir=$HOMEDIR/.dotfiles --work-tree=$HOMEDIR"
 aliases["cd_school"] = 'cd "G:\\My Drive\\School"'
 aliases["md_compile"] = _compile_markdown
 aliases["vscode_dump"] = "code --list-extensions > $HOMEDIR/AppData/Roaming/Code/User/extensions"
+aliases["vscode_install"] = _vscode_install
 aliases["workon"] = _work_on
 aliases["rebuild_dirs"] = _rebuild_dirs
 
