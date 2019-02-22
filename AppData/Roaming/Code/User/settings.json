@@ -71,5 +71,6 @@
             ]
         }
     ],
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "autoDocstring.docstringFormat": "sphinx"
 }
