@@ -1,7 +1,7 @@
 {
     "git.ignoreMissingGitWarning": true,
     "workbench.colorTheme": "Palenight Theme",
-    "editor.fontFamily": "'Monoid', 'Fira Code Retina', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'Dank Mono', 'Monoid', 'Fira Code Retina', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "window.titleBarStyle": "custom",
     "explorer.confirmDelete": false,
@@ -41,12 +41,12 @@
         }
     ],
     "python.linting.flake8Enabled": true,
+    "python.linting.pydocstyleEnabled": true,
     "markdownlint.config": {
         "MD013": false,
         "MD041": false,
         "MD002": false
     },
-    "editor.fontSize": 12,
     "latex-workshop.message.update.show": false,
     "latex-workshop.latex.recipes": [
         {
@@ -72,5 +72,7 @@
         }
     ],
     "workbench.editor.showTabs": false,
-    "autoDocstring.docstringFormat": "sphinx"
+    "autoDocstring.docstringFormat": "sphinx",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue" 
 }
