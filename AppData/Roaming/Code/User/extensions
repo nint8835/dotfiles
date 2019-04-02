@@ -1,15 +1,11 @@
 batisteo.vscode-django
 DavidAnson.vscode-markdownlint
-dbaeumer.vscode-eslint
-dzannotti.vscode-babel-coloring
 eamodio.gitlens
 EditorConfig.EditorConfig
-flowtype.flow-for-vscode
 GitHub.vscode-pull-request-github
 James-Yu.latex-workshop
 mikestead.dotenv
 ms-python.python
-ms-vscode.cpptools
 njpwerner.autodocstring
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
