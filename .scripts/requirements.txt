@@ -1,2 +1,4 @@
 pyperclip==1.7.0
 boto3==1.9.174
+notify2==0.3.1
+dbus-python==1.2.8
