@@ -1,0 +1,11 @@
+{{- $git_email := "" -}}
+{{- if hasKey .git "email" }}
+{{-   $git_email = .git.email -}}
+{{- else -}}
+{{-   $git_email = promptString "Git email" -}}
+{{- end -}}
+
+data:
+    git:
+        email: {{ $git_email | quote }}
+
