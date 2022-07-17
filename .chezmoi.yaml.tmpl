@@ -8,4 +8,9 @@
 data:
     git:
         email: {{ $git_email | quote }}
-
+    path:
+        - {{ joinPath .chezmoi.homeDir ".cargo/bin" | quote }}
+        - {{ joinPath .chezmoi.homeDir "context/tex/texmf-osx-64/bin" | quote }}
+        - {{ joinPath .chezmoi.homeDir "go/bin" | quote }}
+        - {{ joinPath .chezmoi.homeDir ".pyenv/shims" | quote }}
+        - {{ joinPath .chezmoi.homeDir ".local/bin" | quote }}

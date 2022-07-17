@@ -1,0 +1,3 @@
+{{ if and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "arm64") -}}
+alias rosettabrew '/usr/local/bin/brew'
+{{- end }}
