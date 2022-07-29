@@ -2,3 +2,27 @@
 
 [terraform]
 disabled = false
+
+[aws]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
