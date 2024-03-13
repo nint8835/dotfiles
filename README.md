@@ -21,6 +21,6 @@ chezmoi apply
 #### iTerm2
 
 - In Preferences, navigate to General -> Preferences
-- Enable "Load preferences from a custom folder or URL
+- Enable "Load preferences from a custom folder or URL"
 - Browse to `~/.config/iterm2`
 - Restart iTerm2
