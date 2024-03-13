@@ -1,0 +1,5 @@
+{{ $user_email := promptStringOnce . "user.email" "Email address" "riley@rileyflynn.me" }}
+
+data:
+    user:
+        email: {{ $user_email | quote }}
