@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+
+    "editor.fontFamily": "'PragmataPro Mono Liga', 'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.cursorBlinking": "smooth",
+
+    // Remove unnecessary UI elements
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "single",
+
+    // Automatically perform / stop confirming common actions
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "onFocusChange",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    
+    "workbench.startupEditor": "newUntitledFile",
+}
