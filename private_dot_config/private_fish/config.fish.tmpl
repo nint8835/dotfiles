@@ -1,13 +1,15 @@
 set fish_greeting
 
-source ~/.asdf/asdf.fish
+{{ if eq .chezmoi.os "darwin" -}}
+    set -x PATH /opt/homebrew/bin $PATH
+{{- end }}
 
-set -x GOPATH ~/go
-set -x PATH $GOPATH/bin $PATH
+set -x PATH (go env GOPATH)/bin $PATH
+
+{{ if eq .chezmoi.os "darwin" -}}
+    source /opt/homebrew/opt/asdf/libexec/asdf.fish
+{{- else -}}
+    source ~/.asdf/asdf.fish
+{{- end }}
 
 starship init fish | source
-
-set -x PATH ~/.local/share/JetBrains/Toolbox/scripts $PATH
-set -x PATH ~/.local/bin $PATH
-set -x PATH /usr/local/go/bin $PATH
-set -x PATH ~/.temporalio/bin $PATH
