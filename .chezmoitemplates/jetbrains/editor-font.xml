@@ -3,7 +3,7 @@
     <option name="VERSION" value="1" />
     <option name="FONT_SIZE" value="14" />
     <option name="FONT_SIZE_2D" value="14.0" />
-    <option name="FONT_FAMILY" value="PragmataPro Liga" />
+    <option name="FONT_FAMILY" value="PragmataPro Mono Liga" />
     <option name="USE_LIGATURES" value="true" />
   </component>
 </application>
