@@ -3,20 +3,13 @@ import shutil
 from pathlib import Path
 
 # Parent directories to create managed config files under.
-TARGET_PATHS = [
-    Path("private_Library/private_Application Support/JetBrains")
-]
+TARGET_PATHS = [Path("private_Library/private_Application Support/JetBrains")]
 
 # JetBrains editors to create managed configs for. Must be named following the settings folder name format.
-EDITORS = [
-    "GoLand",
-    "IntelliJIdea"
-]
+EDITORS = ["GoLand", "IntelliJIdea"]
 
 # Editor versions to create configs for.
-VERSIONS = [
-    "2023.3"
-]
+VERSIONS = ["2023.3"]
 
 # Config files that should be managed by this repo.
 MANAGED_FILES = [
@@ -38,5 +31,6 @@ for target_path in TARGET_PATHS:
             for managed_file in MANAGED_FILES:
                 managed_file_path = version_path / (managed_file + ".tmpl")
                 managed_file_path.touch(exist_ok=True)
-                managed_file_path.write_text('{{- template "jetbrains/' + managed_file + '" . -}}\n')
-
+                managed_file_path.write_text(
+                    f'{{{{- template "jetbrains/{managed_file}" . -}}}}\n'
+                )
