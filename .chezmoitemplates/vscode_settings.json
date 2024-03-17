@@ -19,5 +19,12 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     
-    "workbench.startupEditor": "newUntitledFile",
+    // Clean up the directory tree
+    "files.exclude": {
+        // Python
+        "**/__pycache__": true,
+        "**/venv": true
+    },
+
+    "workbench.startupEditor": "newUntitledFile"
 }
