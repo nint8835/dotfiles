@@ -1,7 +1,8 @@
 set fish_greeting
 
 {{ if eq .chezmoi.os "darwin" -}}
-    set -x PATH /opt/homebrew/bin $PATH
+set -x PATH /opt/homebrew/bin $PATH
+set -x PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH 
 {{- end }}
 
 set -x PATH (go env GOPATH)/bin $PATH
