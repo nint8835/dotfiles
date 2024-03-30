@@ -1,30 +1,30 @@
 {
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "editor.fontFamily": "'PragmataPro Mono Liga', 'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
 
-    "editor.fontFamily": "'PragmataPro Mono Liga', 'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 14,
-    "editor.fontLigatures": true,
-    "editor.cursorBlinking": "smooth",
+  // Remove unnecessary UI elements
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.showTabs": "single",
 
-    // Remove unnecessary UI elements
-    "editor.minimap.enabled": false,
-    "workbench.activityBar.location": "hidden",
-    "workbench.editor.showTabs": "single",
+  // Automatically perform / stop confirming common actions
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "onFocusChange",
+  "git.autofetch": true,
+  "git.confirmSync": false,
 
-    // Automatically perform / stop confirming common actions
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "onFocusChange",
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    
-    // Clean up the directory tree
-    "files.exclude": {
-        // Python
-        "**/__pycache__": true,
-        "**/venv": true
-    },
+  // Clean up the directory tree
+  "files.exclude": {
+    // Python
+    "**/__pycache__": true,
+    "**/venv": true,
+    "**/.ruff_cache": true
+  },
 
-    "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile"
 }
