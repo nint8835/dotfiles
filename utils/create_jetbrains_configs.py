@@ -6,10 +6,10 @@ from pathlib import Path
 TARGET_PATHS = [Path("private_Library/private_Application Support/JetBrains")]
 
 # JetBrains editors to create managed configs for. Must be named following the settings folder name format.
-EDITORS = ["GoLand", "IntelliJIdea"]
+EDITORS = ["GoLand", "IntelliJIdea", "Rider"]
 
 # Editor versions to create configs for.
-VERSIONS = ["2024.1.1"]
+VERSIONS = ["2024.1.4", "2024.1"]
 
 # Config files that should be managed by this repo.
 MANAGED_FILES = [
