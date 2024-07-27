@@ -7,6 +7,7 @@ set -x PATH /usr/local/share/dotnet/x64 $PATH
 {{- end }}
 
 set -x PATH (go env GOPATH)/bin $PATH
+set -x PATH ~/.local/bin $PATH
 
 {{ if eq .chezmoi.os "darwin" -}}
     source /opt/homebrew/opt/asdf/libexec/asdf.fish
