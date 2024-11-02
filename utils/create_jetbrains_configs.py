@@ -9,7 +9,11 @@ TARGET_PATHS = [Path("private_Library/private_Application Support/JetBrains")]
 EDITORS = ["GoLand", "IntelliJIdea", "Rider"]
 
 # Editor versions to create configs for.
-VERSIONS = ["2024.1.4", "2024.1"]
+VERSIONS = [
+    "2024.2.3",
+    "2024.2.4",
+    "2024.2.7",
+]
 
 # Config files that should be managed by this repo.
 MANAGED_FILES = [
