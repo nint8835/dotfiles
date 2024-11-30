@@ -10,9 +10,7 @@ EDITORS = ["GoLand", "IntelliJIdea", "Rider"]
 
 # Editor versions to create configs for.
 VERSIONS = [
-    "2024.2.3",
-    "2024.2.4",
-    "2024.2.7",
+    "2024.3",
 ]
 
 # Config files that should be managed by this repo.
