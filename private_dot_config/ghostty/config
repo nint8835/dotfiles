@@ -1,4 +1,14 @@
 font-family = "PragmataPro Mono"
 font-size = 14
-theme = "Monokai Pro (Filter Spectrum)"
 font-thicken = true
+theme = "Monokai Pro (Filter Spectrum)"
+unfocused-split-opacity = 1
+# 1MB - change to unlimited once unlimited scrollback is a thing
+scrollback-limit = 1048576
+
+macos-titlebar-style = "tabs"
+macos-icon = "custom-style"
+# Monokai Pro (Filter Spectrum) background
+macos-icon-screen-color = "#222222"
+# Monokai Pro (Filter Spectrum) palette #1
+macos-icon-ghost-color = "#fc618d"
