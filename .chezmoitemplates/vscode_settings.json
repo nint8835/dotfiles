@@ -1,6 +1,6 @@
 {
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.iconTheme": "catppuccin-frappe",
   "editor.fontFamily": "'PragmataPro Mono Liga', 'Operator Mono SSm Lig', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
