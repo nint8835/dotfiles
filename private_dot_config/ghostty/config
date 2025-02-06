@@ -8,7 +8,7 @@ scrollback-limit = 1048576
 
 macos-titlebar-style = "tabs"
 macos-icon = "custom-style"
-# Monokai Pro (Filter Spectrum) background
-macos-icon-screen-color = "#222222"
-# Monokai Pro (Filter Spectrum) palette #1
-macos-icon-ghost-color = "#fc618d"
+# Catppuccin Frappe background
+macos-icon-screen-color = "#303446"
+# Catppuccin Frappe palette #1
+macos-icon-ghost-color = "#e78284"
