@@ -3,8 +3,8 @@ font-size = 14
 font-thicken = true
 theme = "catppuccin-frappe"
 unfocused-split-opacity = 1
-# 1MB - change to unlimited once unlimited scrollback is a thing
-scrollback-limit = 1048576
+# 1GB - change to unlimited once unlimited scrollback is a thing
+scrollback-limit = 1073741824
 
 macos-titlebar-style = "tabs"
 macos-icon = "custom-style"
