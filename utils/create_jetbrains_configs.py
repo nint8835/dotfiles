@@ -10,7 +10,7 @@ EDITORS = ["GoLand", "IntelliJIdea", "Rider"]
 
 # Editor versions to create configs for.
 VERSIONS = [
-    "2024.3.4",
+    "2024.3.5",
     "2024.3.6",
 ]   
 
