@@ -10,8 +10,8 @@ EDITORS = ["IntelliJIdea", "Rider"]
 
 # Editor versions to create configs for.
 VERSIONS = [
-    "2025.1.3",
-    "2025.1.4",
+    "2025.2",
+    "2025.2.0.1",
 ]   
 
 # Config files that should be managed by this repo.
