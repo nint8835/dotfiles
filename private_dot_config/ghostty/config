@@ -1,7 +1,7 @@
 font-family = "PragmataPro Mono"
 font-size = 14
 font-thicken = true
-theme = "catppuccin-frappe"
+theme = "Catppuccin Frappe"
 unfocused-split-opacity = 1
 # 1GB - change to unlimited once unlimited scrollback is a thing
 scrollback-limit = 1073741824
