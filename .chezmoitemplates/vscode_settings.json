@@ -26,5 +26,12 @@
     "**/.ruff_cache": true
   },
 
+  // Fix VS Code remote issues with Fish
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.useExecServer": false,
+  "remote.SSH.remotePlatform": {
+    "hephaestus": "linux"
+  },
+
   "workbench.startupEditor": "newUntitledFile"
 }
