@@ -10,7 +10,6 @@ EDITORS = ["IntelliJIdea", "Rider"]
 
 # Editor versions to create configs for.
 VERSIONS = [
-    "2025.2.1",
     "2025.2.2",
 ]   
 
