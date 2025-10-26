@@ -15,3 +15,7 @@ set -x PATH ~/.local/bin $PATH
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
+
+{{ if ne .chezmoi.os "darwin" -}}
+mise activate fish | source
+{{- end }}
