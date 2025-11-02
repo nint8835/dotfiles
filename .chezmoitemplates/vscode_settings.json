@@ -30,7 +30,7 @@
   "remote.SSH.useLocalServer": false,
   "remote.SSH.useExecServer": false,
   "remote.SSH.remotePlatform": {
-    "hephaestus": "linux"
+    "ares": "linux"
   },
 
   "workbench.startupEditor": "newUntitledFile"
