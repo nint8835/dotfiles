@@ -1,5 +1,6 @@
 [tools]
 node = "22"
+opentofu = "1.11.1"
 python = "3.13"
 
 [settings]
