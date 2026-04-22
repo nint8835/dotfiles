@@ -5,6 +5,10 @@
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "editor.cursorBlinking": "smooth",
+  "workbench.startupEditor": "newUntitledFile",
+  
+  // Stop Copilot tab completions from triggering Co-Authored-By attribution
+  "git.addAICoAuthor": "chatAndAgent",
 
   // Remove unnecessary UI elements
   "editor.minimap.enabled": false,
@@ -31,7 +35,5 @@
   "remote.SSH.useExecServer": false,
   "remote.SSH.remotePlatform": {
     "ares": "linux"
-  },
-
-  "workbench.startupEditor": "newUntitledFile"
+  }
 }
