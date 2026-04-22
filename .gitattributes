@@ -1,5 +1,4 @@
 *.fish.tmpl linguist-language=fish
 *.json.tmpl linguist-language=JSON
 *.xml.tmpl linguist-language=XML
-private_dot_config/iterm2/com.googlecode.iterm2.plist.tmpl linguist-generated
 private_Library/private_Application[[:space:]]Support/JetBrains/** linguist-generated
