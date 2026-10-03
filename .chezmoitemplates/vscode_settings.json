@@ -6,6 +6,8 @@
   "editor.fontLigatures": true,
   "editor.cursorBlinking": "smooth",
   "workbench.startupEditor": "newUntitledFile",
+  "git.blame.editorDecoration.enabled": true,
+  "update.showReleaseNotes": false,
   
   // Stop Copilot tab completions from triggering Co-Authored-By attribution
   "git.addAICoAuthor": "chatAndAgent",
