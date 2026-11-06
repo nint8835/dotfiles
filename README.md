@@ -34,3 +34,10 @@ chezmoi apply
 ```
 
 Note: ensure you have an SSH key configured for Git first. If not using SSH, swap the git URL for a HTTPS one.
+
+## NixOS
+
+The [perdix NixOS configuration](nixos/README.md) lives under `nixos/`.
+Build it directly with Nix; this directory is ignored by chezmoi. Home Manager
+manages the Niri configuration, while Noctalia manages its generated colours
+and mutable UI settings.

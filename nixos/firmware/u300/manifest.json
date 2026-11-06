@@ -1,0 +1,30 @@
+{
+  "stock_sha256": "0d6ab7c6349a8845969cc04561beee5d96de0cd566dacd5747605346d598d7cd",
+  "format": "RGB888",
+  "lanes": 4,
+  "htotal": 1272,
+  "vtotal": 2174,
+  "modes": {
+    "59-94": {
+      "clock_kHz": 165754,
+      "sha256": "de373f827392e62b3ef4104358052417e5c274b888bfcbfa745b679f23b7d23a",
+      "changed_offsets": [
+        26,
+        8035,
+        8036
+      ]
+    },
+    "60": {
+      "clock_kHz": 165920,
+      "sha256": "2f04a83ff7f10ab339cda63642958e58273d842c70c59a704c4056ae51a03567",
+      "changed_offsets": [
+        26,
+        8035,
+        8036
+      ]
+    }
+  },
+  "cpio_sha256": "5f79ec53a437e902368f4e82001a4e64d17e8918e18ca36a0e43a5c77bffdca5",
+  "cpio_blake2b": "4ac924205ddc2ff3583b31c32f6d0b960800c1e7f711a6df0811daf85083db4af847a90cb712feaa3d1b13f89036376c54e14051b3d9d1c8ca51c8f0020aed24",
+  "cpio_bytes": 22528
+}

@@ -9,3 +9,7 @@ utils
 {{ if ne .chezmoi.os "linux" -}}
     .config/Code
 {{- end }}
+
+# NixOS source is built directly from Git, not applied by chezmoi.
+nixos/
+nixos/**
