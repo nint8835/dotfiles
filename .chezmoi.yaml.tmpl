@@ -1,11 +1,14 @@
+{{- $isNixOS := false -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{-   $isNixOS = eq .chezmoi.osRelease.id "nixos" -}}
+{{- end -}}
 {{ $user_email := promptStringOnce . "user.email" "Email address" "riley@rileyflynn.me" }}
 
-{{ if eq .chezmoi.os "linux" -}}
-{{ if eq .chezmoi.osRelease.id "nixos" -}}
+{{ if $isNixOS -}}
 sourceDir: {{ joinPath .chezmoi.homeDir "dotfiles" | quote }}
-{{ end -}}
 {{ end -}}
 
 data:
+    isNixOS: {{ $isNixOS }}
     user:
         email: {{ $user_email | quote }}

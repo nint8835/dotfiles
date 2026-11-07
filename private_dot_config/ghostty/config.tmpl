@@ -1,11 +1,7 @@
-{{- $useNoctalia := false -}}
-{{- if eq .chezmoi.os "linux" -}}
-{{-   $useNoctalia = eq .chezmoi.osRelease.id "nixos" -}}
-{{- end -}}
 font-family = "PragmataPro Mono"
 font-size = 14
 font-thicken = true
-theme = {{ if $useNoctalia }}noctalia{{ else }}"Catppuccin Frappe"{{ end }}
+theme = {{ if .isNixOS }}noctalia{{ else }}"Catppuccin Frappe"{{ end }}
 unfocused-split-opacity = 1
 # 1GB - change to unlimited once unlimited scrollback is a thing
 scrollback-limit = 1073741824
