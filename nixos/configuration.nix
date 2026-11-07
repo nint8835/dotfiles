@@ -52,7 +52,19 @@
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
 
-  environment.systemPackages = [ pkgs.chezmoi pkgs.git pkgs.ghostty pkgs.ghostty.terminfo pkgs.firefox pkgs.vscode pkgsUnstable.codex pkgs.bubblewrap ];
+  environment.systemPackages = [
+    pkgs.chezmoi
+    pkgs.git
+    pkgs.ghostty
+    pkgs.ghostty.terminfo
+    pkgs.firefox
+    # Niri is not automatically recognized by VS Code's keyring detection.
+    (pkgs.vscode.override {
+      commandLineArgs = "--password-store=gnome-libsecret";
+    })
+    pkgsUnstable.codex
+    pkgs.bubblewrap
+  ];
 
   programs._1password.enable = true;
   programs._1password-gui = {
