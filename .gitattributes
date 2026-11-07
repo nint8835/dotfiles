@@ -1,4 +1,6 @@
 *.fish.tmpl linguist-language=fish
 *.json.tmpl linguist-language=JSON
 *.xml.tmpl linguist-language=XML
+nixos/firmware/u300/build_vbt.py linguist-vendored
+nixos/hardware-configuration.nix linguist-generated
 private_Library/private_Application[[:space:]]Support/JetBrains/** linguist-generated
