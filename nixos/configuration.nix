@@ -50,7 +50,7 @@
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
 
-  environment.systemPackages = [ pkgs.chezmoi ];
+  environment.systemPackages = [ pkgs.chezmoi pkgs.git ];
 
   programs.niri.enable = true;
   # Niri autostarts Noctalia; its dependencies are configured explicitly below.
