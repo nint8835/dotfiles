@@ -1,5 +1,11 @@
 {{ $user_email := promptStringOnce . "user.email" "Email address" "riley@rileyflynn.me" }}
 
+{{ if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.osRelease.id "nixos" -}}
+sourceDir: {{ joinPath .chezmoi.homeDir "dotfiles" | quote }}
+{{ end -}}
+{{ end -}}
+
 data:
     user:
         email: {{ $user_email | quote }}
