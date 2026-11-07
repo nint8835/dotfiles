@@ -98,7 +98,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Open Ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Open Noctalia Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+Space hotkey-overlay-title="Open Noctalia Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+S hotkey-overlay-title="Open Noctalia Control Center" { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
