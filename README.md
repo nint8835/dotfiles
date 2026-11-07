@@ -34,3 +34,7 @@ chezmoi apply
 ```
 
 Note: ensure you have an SSH key configured for Git first. If not using SSH, swap the git URL for a HTTPS one.
+
+## NixOS
+
+See [nixos/README.md](nixos/README.md) for the perdix configuration and rebuild commands.
