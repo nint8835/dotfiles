@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgsUnstable, ... }:
 
 {
   imports = [
@@ -50,7 +50,7 @@
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
 
-  environment.systemPackages = [ pkgs.chezmoi pkgs.git pkgs.ghostty pkgs.ghostty.terminfo pkgs.firefox pkgs.vscode ];
+  environment.systemPackages = [ pkgs.chezmoi pkgs.git pkgs.ghostty pkgs.ghostty.terminfo pkgs.firefox pkgs.vscode pkgsUnstable.codex pkgs.bubblewrap ];
 
   programs._1password.enable = true;
   programs._1password-gui = {

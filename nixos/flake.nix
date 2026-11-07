@@ -4,6 +4,7 @@
   inputs = {
     # Follow release updates; flake.lock pins each reviewed revision.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,8 +18,9 @@
     };
   };
 
-  outputs = { nixpkgs, nixos-hardware, noctalia, noctalia-greeter, home-manager, ... }: {
+  outputs = { nixpkgs, nixpkgs-unstable, nixos-hardware, noctalia, noctalia-greeter, home-manager, ... }: {
     nixosConfigurations.perdix = nixpkgs.lib.nixosSystem {
+      specialArgs.pkgsUnstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
       modules = [
         nixos-hardware.nixosModules.chuwi-minibook-x
         noctalia.nixosModules.default
