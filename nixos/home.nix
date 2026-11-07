@@ -5,7 +5,6 @@
   home.stateVersion = "26.05";
 
   xdg.enable = true;
-  xdg.configFile."niri/config.kdl".source = ./niri.kdl;
 
   # Noctalia scans Pictures by default. Keep individual files managed so users
   # can add their own images alongside this starter collection.

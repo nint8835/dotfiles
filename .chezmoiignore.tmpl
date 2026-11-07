@@ -13,3 +13,13 @@ utils
 # NixOS source is built directly from Git, not applied by chezmoi.
 nixos/
 nixos/**
+
+# Niri is configured by chezmoi only on NixOS.
+{{- $isNixOS := false }}
+{{- if eq .chezmoi.os "linux" }}
+{{-   $isNixOS = eq .chezmoi.osRelease.id "nixos" }}
+{{- end }}
+{{ if not $isNixOS -}}
+.config/niri
+.config/niri/**
+{{- end }}

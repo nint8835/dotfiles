@@ -12,9 +12,11 @@ cd ~/dotfiles
 git pull --ff-only
 nix flake check --no-build ./nixos
 sudo nixos-rebuild switch --flake "$HOME/dotfiles/nixos#perdix"
+chezmoi --source "$HOME/dotfiles" apply "$HOME/.config/niri/config.kdl"
 ```
 
-Run `git add` for new files before building. Home Manager owns `niri.kdl`;
+Run `git add` for new files before building. ChezMoi manages Niri on NixOS;
+the first rebuild releases Home Manager's symlink before chezmoi applies it.
 Noctalia's generated colours and UI settings remain mutable.
 
 ## Update packages

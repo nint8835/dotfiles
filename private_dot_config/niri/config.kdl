@@ -257,6 +257,6 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
-// Noctalia owns this mutable colour file; Home Manager owns the main config.
+// Noctalia owns this mutable colour file; chezmoi owns the main config.
 // Load it last so generated colours override the fallback colours above.
 include optional=true "~/.config/niri/noctalia.kdl"
