@@ -12,7 +12,7 @@ cd ~/dotfiles
 git pull --ff-only
 nix flake check --no-build ./nixos
 sudo nixos-rebuild switch --flake "$HOME/dotfiles/nixos#perdix"
-chezmoi apply "$HOME/.config/niri/config.kdl"
+chezmoi apply
 ```
 
 Run `git add` for new files before building. ChezMoi manages Niri on NixOS;
