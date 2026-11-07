@@ -37,7 +37,4 @@ Note: ensure you have an SSH key configured for Git first. If not using SSH, swa
 
 ## NixOS
 
-The [perdix NixOS configuration](nixos/README.md) lives under `nixos/`.
-Build it directly with Nix; this directory is ignored by chezmoi. Home Manager
-manages the Niri configuration, while Noctalia manages its generated colours
-and mutable UI settings.
+See [nixos/README.md](nixos/README.md) for the perdix configuration and rebuild commands.
