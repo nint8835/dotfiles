@@ -52,6 +52,11 @@
 
   environment.systemPackages = [ pkgs.chezmoi pkgs.git pkgs.ghostty pkgs.ghostty.terminfo pkgs.firefox pkgs.vscode ];
 
+  programs._1password.enable = true;
+  programs._1password-gui = {
+    enable = true;
+  };
+
   programs.niri.enable = true;
   # Niri autostarts Noctalia; its dependencies are configured explicitly below.
   programs.noctalia.enable = true;
