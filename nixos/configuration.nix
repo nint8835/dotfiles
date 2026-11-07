@@ -42,6 +42,8 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  fonts.packages = [ (pkgs.callPackage ./packages/pragmatapro.nix { }) ];
+
   users.users.nint8835 = {
     isNormalUser = true;
     description = "Riley Flynn";

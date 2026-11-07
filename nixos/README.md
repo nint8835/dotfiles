@@ -17,6 +17,22 @@ chezmoi apply
 
 Stage new files with `git add` before building.
 
+## PragmataPro
+
+Before the first rebuild, download your purchased [PragmataPro archive](https://fsd.it/shop/fonts/pragmatapro/)
+outside this checkout and import it on perdix:
+
+```sh
+nix-store --add-fixed sha256 ~/Downloads/PragmataPro-fialk8-6rjkhe.zip
+```
+
+For updates, change the filename, version and hash in
+[the package](packages/pragmatapro.nix), then import the new archive. Get its hash
+with `nix hash file /path/to/archive.zip`.
+
+Keep the archive and packaged font out of Git and public binary caches.
+Restart applications after rebuilding.
+
 ## Update packages
 
 ```sh
