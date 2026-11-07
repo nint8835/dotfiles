@@ -12,3 +12,9 @@ macos-icon = "custom-style"
 macos-icon-screen-color = "#303446"
 # Catppuccin Frappe palette #1
 macos-icon-ghost-color = "#e78284"
+
+{{ if eq .chezmoi.os "linux" -}}
+gtk-titlebar-style = tabs
+window-theme = ghostty
+gtk-wide-tabs = false
+{{ end -}}
