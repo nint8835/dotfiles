@@ -1,23 +1,21 @@
 # perdix
 
-NixOS configuration for a Chuwi MiniBook X U300, using Niri, Noctalia and Home
-Manager. ChezMoi ignores this directory.
+Chuwi MiniBook X U300 running NixOS, Niri and Noctalia.
 
 ## Apply
 
-Initialize once with `chezmoi --source ~/dotfiles init`. Then, on perdix:
+From a checkout at `~/dotfiles` on perdix, initialize once with
+`chezmoi --source ~/dotfiles init`. Then:
 
 ```sh
 cd ~/dotfiles
 git pull --ff-only
 nix flake check --no-build ./nixos
-sudo nixos-rebuild switch --flake "$HOME/dotfiles/nixos#perdix"
+sudo nixos-rebuild switch --flake ./nixos#perdix
 chezmoi apply
 ```
 
-Run `git add` for new files before building. ChezMoi manages Niri on NixOS;
-the first rebuild releases Home Manager's symlink before chezmoi applies it.
-Noctalia's generated colours and UI settings remain mutable.
+Stage new files with `git add` before building.
 
 ## Update packages
 
@@ -39,5 +37,4 @@ Select an earlier generation in Limine, or run:
 sudo nixos-rebuild switch --rollback
 ```
 
-The [60 Hz display override](firmware/u300/README.md) fixes panel corruption.
-Remove the `display-60hz.nix` import and rebuild to return to stock timings.
+Panel timing override and recovery: [display firmware](firmware/u300/README.md).
