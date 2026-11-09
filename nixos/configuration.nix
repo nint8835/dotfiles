@@ -48,14 +48,22 @@
     isNormalUser = true;
     description = "Riley Flynn";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
   };
+  programs.fish.enable = true;
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
 
   environment.systemPackages = [
     pkgs.chezmoi
     pkgs.git
+    pkgs.go
+    pkgs.starship
+    pkgs.zoxide
+    pkgs.fzf
+    pkgs.mise
     pkgs.ghostty
+    # Shell integrations are initialized by the chezmoi-managed Fish config.
     pkgs.ghostty.terminfo
     pkgs.firefox
     # Niri is not automatically recognized by VS Code's keyring detection.
