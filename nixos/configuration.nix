@@ -66,12 +66,17 @@
     pkgs.fzf
     pkgs.mise
     pkgs.ghostty
-    # Shell integrations are initialized by the chezmoi-managed Fish config.
     pkgs.ghostty.terminfo
     pkgs.firefox
-    # Niri is not automatically recognized by VS Code's keyring detection.
-    (pkgs.vscode.override {
-      commandLineArgs = "--password-store=gnome-libsecret";
+    (pkgs.vscode-with-extensions.override {
+      # Niri is not automatically recognized by VS Code's keyring detection.
+      vscode = pkgs.vscode.override {
+        commandLineArgs = "--password-store=gnome-libsecret";
+      };
+      vscodeExtensions = with pkgs.vscode-extensions; [
+        catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
+      ];
     })
     pkgsUnstable.codex
     pkgs.bubblewrap
