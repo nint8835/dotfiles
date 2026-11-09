@@ -7,7 +7,8 @@
   ];
 
   # Limine renders the portrait panel's boot menu in landscape.
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Limine uses the standard EFI path, so no firmware boot entry is needed.
+  boot.loader.efi.canTouchEfiVariables = false;
   boot.loader.timeout = 5;
   boot.loader.limine = {
     enable = true;
@@ -57,6 +58,7 @@
   environment.systemPackages = [
     pkgs.chezmoi
     pkgs.git
+    pkgs.git-interactive-rebase-tool
     pkgs.go
     pkgs.starship
     pkgs.zoxide
