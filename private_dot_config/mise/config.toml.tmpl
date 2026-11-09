@@ -4,6 +4,9 @@ opentofu = "1.13.1"
 python = "3.13"
 
 [settings]
+{{ if .isNixOS -}}
+all_compile = false
+{{ end -}}
 idiomatic_version_file_enable_tools = []
 experimental = true
 

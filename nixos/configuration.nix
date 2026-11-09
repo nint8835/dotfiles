@@ -52,6 +52,7 @@
     shell = pkgs.fish;
   };
   programs.fish.enable = true;
+  programs.nix-ld.enable = true;
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
 
