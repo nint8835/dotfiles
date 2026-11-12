@@ -1,0 +1,16 @@
+# chezmoi:modify-template
+{{- $block := `# >>> chezmoi managed >>>
+# Mise tools for Bash login shells.
+if [ -n "${BASH_VERSION:-}" ] && command -v mise >/dev/null 2>&1; then
+    eval "$(mise activate bash --shims)"
+fi
+# <<< chezmoi managed <<<
+` -}}
+{{- $pattern := `(?ms)^# >>> chezmoi managed >>>
+.*?^# <<< chezmoi managed <<<(?:
+|$)` -}}
+{{- if regexMatch $pattern .chezmoi.stdin -}}
+{{ regexReplaceAllLiteral $pattern .chezmoi.stdin $block }}
+{{- else -}}
+{{ printf "%s\n%s" .chezmoi.stdin $block }}
+{{- end -}}
