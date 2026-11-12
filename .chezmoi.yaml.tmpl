@@ -1,6 +1,8 @@
 {{- $isNixOS := false -}}
+{{- $isDebian := false -}}
 {{- if eq .chezmoi.os "linux" -}}
 {{-   $isNixOS = eq .chezmoi.osRelease.id "nixos" -}}
+{{-   $isDebian = eq .chezmoi.osRelease.id "debian" -}}
 {{- end -}}
 {{ $user_email := promptStringOnce . "user.email" "Email address" "riley@rileyflynn.me" }}
 
@@ -10,5 +12,6 @@ sourceDir: {{ joinPath .chezmoi.homeDir "dotfiles" | quote }}
 
 data:
     isNixOS: {{ $isNixOS }}
+    isDebian: {{ $isDebian }}
     user:
         email: {{ $user_email | quote }}
