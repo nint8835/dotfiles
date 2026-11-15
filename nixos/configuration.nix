@@ -69,7 +69,6 @@
     pkgs.chezmoi
     pkgs.git
     pkgs.git-interactive-rebase-tool
-    pkgs.go
     pkgs.starship
     pkgs.zoxide
     pkgs.fzf
